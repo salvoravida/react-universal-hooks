@@ -15,6 +15,8 @@ Or [yarn](https://yarnpkg.com/):
 
 Usage
 -----    
+Demo https://codesandbox.io/s/jnnnw158j5
+
 ```javascript
 import "react-universal-hooks";
 import React, { useState, useContext } from "react";
