@@ -30,7 +30,8 @@ import App from './App';
   );
 ```
 
-#Demo
+Demo
+---
 https://codesandbox.io/s/jnnnw158j5
 
 ```javascript
