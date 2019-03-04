@@ -15,7 +15,23 @@ Or [yarn](https://yarnpkg.com/):
 
 Usage
 -----    
-Demo https://codesandbox.io/s/jnnnw158j5
+just add one line import!
+
+index.js
+```javascript
+import "react-universal-hooks";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+  ReactDOM.render(
+      <App />,
+    document.getElementById('root'),
+  );
+```
+
+#Demo
+https://codesandbox.io/s/jnnnw158j5
 
 ```javascript
 import "react-universal-hooks";
