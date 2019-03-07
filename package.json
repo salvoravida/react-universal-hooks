@@ -1,6 +1,6 @@
 {
   "name": "react-universal-hooks",
-  "version": "0.1.1",
+  "version": "0.3.2",
   "description": "react-universal-hooks",
   "main": "dist/index.js",
   "module": "src/index.js",
@@ -38,7 +38,7 @@
   "homepage": "https://github.com/salvoravida/react-universal-hooks#readme",
   "dependencies": {
     "tiny-invariant": "^1.0.3",
-    "react-class-hooks": "^0.3.1"
+    "react-class-hooks": "^0.3.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
