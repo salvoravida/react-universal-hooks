@@ -119,9 +119,10 @@ function getMagicSelf() {
     return React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner.current[instanceKey];
 }
 
-function getMagicFiber() {
-    return React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner.current;
-}
+var getMagicDispatcher = function getMagicDispatcher() {
+    var s = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    return s.ReactCurrentDispatcher.current;
+};
 
 function checkSymbol(name, keySymbol) {
     invariant((typeof keySymbol === 'undefined' ? 'undefined' : _typeof(keySymbol)) === 'symbol', name + ' - Expected a Symbol for key!');
@@ -480,30 +481,7 @@ var useClassContextKey = function useClassContextKey(keySymbol, Context) {
     checkSymbol('useClassContext', keySymbol);
     invariant(Context && Context.Provider && Context.Consumer, 'Context should be React.createContext object!');
 
-    var contextValue = Context._currentValue; //TODO check _currentValue2 ?!
-
-    var currentFiber = getMagicFiber();
-
-    var contextItem = {
-        context: Context,
-        observedBits: 1073741823, //all  //TODO support observedBits
-        next: null
-    };
-
-    //set contextDependencies for update on Context change.
-    if (!currentFiber.contextDependencies) {
-        currentFiber.contextDependencies = {
-            expirationTime: 0,
-            first: contextItem
-        };
-    } else {
-        var last = currentFiber.contextDependencies.first;
-        while (last.next) {
-            last = last.next;
-        }last.next = contextItem;
-    }
-
-    return contextValue;
+    return getMagicDispatcher().readContext(Context);
 };
 
 var useClassContext = createHook('Contexts', useClassContextKey);
