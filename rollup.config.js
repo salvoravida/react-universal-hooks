@@ -1,6 +1,5 @@
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
 import resolve from 'rollup-plugin-node-resolve';
 
 export default [{
@@ -18,13 +17,16 @@ export default [{
     ],
     plugins: [
         resolve(),
-        external(),
+        commonjs(),
         babel({
             exclude: 'node_modules/!**',
-            plugins: ['external-helpers'],
+            presets: [
+                ['@babel/preset-env', {
+                    modules: false,
+                }],
+                '@babel/preset-react',
+            ],
         }),
-        resolve(),
-        commonjs(),
     ],
-}
+},
 ];
