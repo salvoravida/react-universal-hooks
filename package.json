@@ -1,6 +1,6 @@
 {
   "name": "react-universal-hooks",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "react-universal-hooks",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -59,7 +59,7 @@
     "eslint-plugin-react": "7.14.3",
     "eslint-plugin-standard": "4.0.1",
     "react": "16.9.0",
-    "react-class-hooks": "0.3.4",
+    "react-class-hooks": "0.3.6",
     "react-dom": "16.9.0",
     "rollup": "1.20.2",
     "rollup-plugin-babel": "4.3.3",
