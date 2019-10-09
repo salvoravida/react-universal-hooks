@@ -1,3 +1,11 @@
+v. 0.3.6
+-----------
+- update react-class-hooks 0.3.6
+
+v. 0.3.5
+-----------
+- fix esm module build
+
 v. 0.3.4
 -----------
 * upgrade to react-class-hooks 0.3.4
