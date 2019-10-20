@@ -42,12 +42,10 @@
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.6.3",
-    "@babel/core": "7.6.3",
+    "@babel/cli": "7.6.4",
+    "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
-    "@babel/runtime-corejs2": "7.6.3",
-    "cross-env": "6.0.3",
     "eslint": "6.5.1",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-standard": "14.1.0",
@@ -61,9 +59,8 @@
     "react": "16.10.2",
     "react-class-hooks": "0.3.6",
     "react-dom": "16.10.2",
-    "rollup": "1.23.1",
+    "rollup": "1.25.0",
     "rollup-plugin-babel": "4.3.3",
-    "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0"
   }
 }
