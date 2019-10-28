@@ -1,3 +1,7 @@
+v. 0.4.0
+-----------
+- update react-class-hooks 0.4.0
+
 v. 0.3.6
 -----------
 - update react-class-hooks 0.3.6

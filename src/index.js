@@ -12,6 +12,7 @@ import {
     useClassMemo,
     useClassRef,
     useClassContext,
+    useClassImperativeHandle,
 } from 'react-class-hooks';
 
 const R = { ...React };
@@ -55,6 +56,10 @@ function useContext(...args) {
     return isFunctional() ? R.useContext(...args) : useClassContext(...args);
 }
 
+function useImperativeHandle(...args) {
+    return isFunctional() ? R.useImperativeHandle(...args) : useClassImperativeHandle(...args);
+}
+
 React.useState = useState;
 React.useReducer = useReducer;
 React.useEffect = useEffect;
@@ -63,3 +68,4 @@ React.useCallback = useCallback;
 React.useMemo = useMemo;
 React.useRef = useRef;
 React.useContext = useContext;
+React.useImperativeHandle = useImperativeHandle;
