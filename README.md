@@ -137,6 +137,7 @@ Currently supported api on Classes Component:
 * useReducer
 * useRef
 * useContext
+* useImperativeHandle
 
 ## How it works under the hood ?
 https://github.com/salvoravida/react-class-hooks
