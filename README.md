@@ -146,6 +146,9 @@ Currently supported api on Classes Component:
 * useContext
 * useImperativeHandle
 
+## How it works under the hood ?
+https://github.com/salvoravida/react-class-hooks
+
 # Feedback
 Let me know what do you think about! <br>
 *Do you like it? Give a star to this project!* :D
