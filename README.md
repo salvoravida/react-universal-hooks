@@ -56,6 +56,13 @@ const Functional = () => {
 };
 
 class Component extends React.PureComponent {
+   constructor(props) {
+      super(props);
+      this.state = { /* your already existing business logic here */ };
+    }
+    componentDidMount (){ /* your already existing business logic here */}
+    componentDidUpdate (){ /* your already existing business logic here */}
+    componentUnmount (){ /* your already existing business logic here */} 
   render() {
     const [count, setCount] = useState(0);
     const { width, height } = useWindowSize();
@@ -143,16 +150,8 @@ Currently supported api on Classes Component:
 https://github.com/salvoravida/react-class-hooks
 
 # Feedback
-
 Let me know what do you think about! <br>
-*Enjoy it? Star this project!* :D
-
-# Todo
-* didCatch support
-* tests
-* better docs
-
-any idea? let me know and contribute!
+*Do you like it? Give a star to this project!* :D
 
 Contributors
 ------------
