@@ -1,6 +1,6 @@
 {
   "name": "react-universal-hooks",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "react-universal-hooks",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -38,25 +38,15 @@
   "homepage": "https://github.com/salvoravida/react-universal-hooks#readme",
   "dependencies": {},
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": "^16.8.0"
+    "react": ">=16.8.0"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",
     "@babel/core": "7.6.4",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
-    "eslint": "6.6.0",
-    "eslint-config-airbnb": "18.0.1",
-    "eslint-config-standard": "14.1.0",
-    "eslint-config-standard-react": "9.2.0",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-node": "10.0.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-standard": "4.0.1",
-    "react-class-hooks": "0.4.0",
+    "@salvoravida/eslint-config": "0.0.1",
+    "react-class-hooks": "0.5.0",
     "rollup": "1.26.0",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-node-resolve": "5.2.0"

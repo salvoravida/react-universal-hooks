@@ -1,3 +1,10 @@
+v. 0.5.0
+-----------
+*  useContext - add observedBits
+*  add useDebugValue !
+*  support React Dev Tools! 
+*  removed babel object spread!
+
 v. 0.4.0
 -----------
 - update react-class-hooks 0.4.0
