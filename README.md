@@ -145,6 +145,26 @@ Currently supported api on Classes Component:
 * useRef
 * useContext
 * useImperativeHandle
+* useDebugValue
+
+## React Dev Tools
+index.js
+```javascript
+import { supportReactDevTools } from 'react-universal-hooks';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+supportReactDevTools ({ active: process.env!=="production" });
+
+  ReactDOM.render(
+      <App />,
+    document.getElementById('root'),
+  );
+```
+
+![universal hooks devtools](https://user-images.githubusercontent.com/20126259/67915182-8663df80-fb92-11e9-9805-52789a6adaa8.PNG)
+
 
 ## How it works under the hood ?
 https://github.com/salvoravida/react-class-hooks
