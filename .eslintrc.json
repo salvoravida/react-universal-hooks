@@ -2,10 +2,11 @@
   "env": {
     "browser": true
   },
-  "extends": "airbnb",
+  "extends": ["@salvoravida"],
   "rules": {
-    "indent": ["error", 4],
-    "import/no-unresolved": 0,
-    "import/no-extraneous-dependencies": 0
+    "react-hooks/rules-of-hooks": 0,
+    "no-prototype-builtins": "off",
+    "no-self-compare": "off",
+    "no-underscore-dangle": "off"
   }
 }
