@@ -41,13 +41,13 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.6.4",
-    "@babel/core": "7.6.4",
-    "@babel/preset-env": "7.6.3",
-    "@babel/preset-react": "7.6.3",
+    "@babel/cli": "7.7.0",
+    "@babel/core": "7.7.2",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
     "@salvoravida/eslint-config": "0.0.1",
     "react-class-hooks": "0.5.0",
-    "rollup": "1.26.0",
+    "rollup": "1.27.0",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-node-resolve": "5.2.0"
   }
