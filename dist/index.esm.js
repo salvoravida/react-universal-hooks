@@ -1,6 +1,8 @@
 import React from 'react';
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -31,17 +33,14 @@ function _defineProperty(obj, key, value) {
 
 var isProduction = process.env.NODE_ENV === 'production';
 var prefix = 'Invariant failed';
-
 function invariant(condition, message) {
-  if (condition) {
-    return;
-  }
-
-  if (isProduction) {
-    throw new Error(prefix);
-  } else {
+    if (condition) {
+        return;
+    }
+    if (isProduction) {
+        throw new Error(prefix);
+    }
     throw new Error(prefix + ": " + (message || ''));
-  }
 }
 
 React.PureComponent.prototype.componentDidMount = function () {};
@@ -55,11 +54,12 @@ var MAGIC_EFFECTS = Symbol["for"]('magicEffects');
 var MAGIC_MEMOS = Symbol["for"]('magicMemos');
 var MAGIC_REFS = Symbol["for"]('magicRefs');
 var MAGIC_STACKS = Symbol["for"]('magicStacks');
-var ReactInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED; // React 15.3.2 support + Polyfill
+var ReactInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+var isReact15 = React.version.indexOf('15') === 0; // React 15.3.2 support + Polyfill
 
-var instanceKey = React.version.indexOf('16') === 0 ? 'stateNode' : '_instance';
+var instanceKey = isReact15 ? '_instance' : 'stateNode';
 
-if (React.version.indexOf('15') === 0) {
+if (isReact15) {
   invariant(ReactInternals, 'Please for React ^15.3.2 - 15.6.2 import "react-class-hooks/poly15" in your root index.js!');
 }
 
@@ -495,7 +495,7 @@ function useClassImperativeHandle(ref, create, deps) {
  */
 function useClassDebugValueKey(keySymbol, value, formatter) {
   checkSymbol('useDebugValueKey', keySymbol);
-  var viewValue = typeof formatter === "function" ? formatter(value) : value;
+  var viewValue = typeof formatter === 'function' ? formatter(value) : value;
   setDevToolsHookState(keySymbol.description, viewValue);
 }
 var useClassDebugValue = createHook('DebugValue', useClassDebugValueKey);

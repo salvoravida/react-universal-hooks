@@ -2,11 +2,15 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+var React = require('react');
 
-var React = _interopDefault(require('react'));
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
 function _typeof(obj) {
+  "@babel/helpers - typeof";
+
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function (obj) {
       return typeof obj;
@@ -37,22 +41,19 @@ function _defineProperty(obj, key, value) {
 
 var isProduction = process.env.NODE_ENV === 'production';
 var prefix = 'Invariant failed';
-
 function invariant(condition, message) {
-  if (condition) {
-    return;
-  }
-
-  if (isProduction) {
-    throw new Error(prefix);
-  } else {
+    if (condition) {
+        return;
+    }
+    if (isProduction) {
+        throw new Error(prefix);
+    }
     throw new Error(prefix + ": " + (message || ''));
-  }
 }
 
-React.PureComponent.prototype.componentDidMount = function () {};
+React__default['default'].PureComponent.prototype.componentDidMount = function () {};
 
-React.Component.prototype.componentDidMount = function () {};
+React__default['default'].Component.prototype.componentDidMount = function () {};
 
 invariant(typeof Symbol === 'function' && Symbol["for"], 'react-class-hooks needs Symbols!'); // Separate objects for better debugging.
 
@@ -61,11 +62,12 @@ var MAGIC_EFFECTS = Symbol["for"]('magicEffects');
 var MAGIC_MEMOS = Symbol["for"]('magicMemos');
 var MAGIC_REFS = Symbol["for"]('magicRefs');
 var MAGIC_STACKS = Symbol["for"]('magicStacks');
-var ReactInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED; // React 15.3.2 support + Polyfill
+var ReactInternals = React__default['default'].__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+var isReact15 = React__default['default'].version.indexOf('15') === 0; // React 15.3.2 support + Polyfill
 
-var instanceKey = React.version.indexOf('16') === 0 ? 'stateNode' : '_instance';
+var instanceKey = isReact15 ? '_instance' : 'stateNode';
 
-if (React.version.indexOf('15') === 0) {
+if (isReact15) {
   invariant(ReactInternals, 'Please for React ^15.3.2 - 15.6.2 import "react-class-hooks/poly15" in your root index.js!');
 }
 
@@ -501,7 +503,7 @@ function useClassImperativeHandle(ref, create, deps) {
  */
 function useClassDebugValueKey(keySymbol, value, formatter) {
   checkSymbol('useDebugValueKey', keySymbol);
-  var viewValue = typeof formatter === "function" ? formatter(value) : value;
+  var viewValue = typeof formatter === 'function' ? formatter(value) : value;
   setDevToolsHookState(keySymbol.description, viewValue);
 }
 var useClassDebugValue = createHook('DebugValue', useClassDebugValueKey);
@@ -514,17 +516,17 @@ var useClassLayoutEffect = useClassEffect;
 /**
  *  https://github.com/salvoravida/react-universal-hooks
  */
-var _useState = React.useState;
-var _useReducer = React.useReducer;
-var _useEffect = React.useEffect;
-var _useLayoutEffect = React.useLayoutEffect;
-var _useCallback = React.useCallback;
-var _useMemo = React.useMemo;
-var _useRef = React.useRef;
-var _useContext = React.useContext;
-var _useImperativeHandle = React.useImperativeHandle;
-var _useDebugValue = React.useDebugValue;
-var ReactInternals$1 = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+var _useState = React__default['default'].useState;
+var _useReducer = React__default['default'].useReducer;
+var _useEffect = React__default['default'].useEffect;
+var _useLayoutEffect = React__default['default'].useLayoutEffect;
+var _useCallback = React__default['default'].useCallback;
+var _useMemo = React__default['default'].useMemo;
+var _useRef = React__default['default'].useRef;
+var _useContext = React__default['default'].useContext;
+var _useImperativeHandle = React__default['default'].useImperativeHandle;
+var _useDebugValue = React__default['default'].useDebugValue;
+var ReactInternals$1 = React__default['default'].__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
 function isFunctional() {
   var c = ReactInternals$1.ReactCurrentOwner.current;
@@ -571,15 +573,15 @@ function useDebugValue() {
   return isFunctional() ? _useDebugValue.apply(void 0, arguments) : useClassDebugValue.apply(void 0, arguments);
 }
 
-React.useState = useState;
-React.useReducer = useReducer;
-React.useEffect = useEffect;
-React.useLayoutEffect = useLayoutEffect;
-React.useCallback = useCallback;
-React.useMemo = useMemo;
-React.useRef = useRef;
-React.useContext = useContext;
-React.useImperativeHandle = useImperativeHandle;
-React.useDebugValue = useDebugValue;
+React__default['default'].useState = useState;
+React__default['default'].useReducer = useReducer;
+React__default['default'].useEffect = useEffect;
+React__default['default'].useLayoutEffect = useLayoutEffect;
+React__default['default'].useCallback = useCallback;
+React__default['default'].useMemo = useMemo;
+React__default['default'].useRef = useRef;
+React__default['default'].useContext = useContext;
+React__default['default'].useImperativeHandle = useImperativeHandle;
+React__default['default'].useDebugValue = useDebugValue;
 
 exports.supportReactDevTools = supportReactDevTools;

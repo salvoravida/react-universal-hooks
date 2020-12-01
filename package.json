@@ -1,6 +1,6 @@
 {
   "name": "react-universal-hooks",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "react-universal-hooks",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -41,15 +41,15 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.4",
-    "@babel/core": "7.8.7",
-    "@babel/preset-env": "7.8.7",
-    "@babel/preset-react": "7.8.3",
+    "@babel/cli": "7.12.8",
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-react": "7.12.7",
+    "@rollup/plugin-babel": "5.2.2",
+    "@rollup/plugin-node-resolve": "11.0.0",
     "@salvoravida/eslint-config": "0.0.4",
-    "react-class-hooks": "0.5.0",
-    "react": "16.13.0",
-    "rollup": "2.0.6",
-    "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-node-resolve": "5.2.0"
+    "react-class-hooks": "0.5.1",
+    "react": "17.0.1",
+    "rollup": "2.34.0"
   }
 }
